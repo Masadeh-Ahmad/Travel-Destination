@@ -1,9 +1,17 @@
-import React from 'react';
 
-export default function App() {
+import { Routes, Route, Link } from "react-router-dom";
+import data from "./data/db.json";
+import Home from './components/home/Home';
+import TourDetails from './components/TourDetails/TourDetails' 
+function App() {
   return (
-    <div>
-      <p>Hello Pizza 🍕 World 👋</p>
-    </div>
-  )
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/city/:id" element={<TourDetails data={ data } />} />
+    </Routes>
+  
+    
+  );
 }
+
+export default App;

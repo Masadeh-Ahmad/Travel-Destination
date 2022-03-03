@@ -3,7 +3,7 @@ import Footer from "../footer/Footer";
 import Places from "../tours/Tours"
 import data from '../../data/db.json'
 
-function App(){
+function Home(){
     return(
         <>
             <Header />
@@ -14,4 +14,4 @@ function App(){
     )
 }
 
-export default App;
+export default Home;
