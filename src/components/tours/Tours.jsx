@@ -1,22 +1,12 @@
-const Places = (props) =>{
+import Tour from "./Tour/Tour";
+const Places = ({place}) =>{
     return(
-        <>
-        {
-            
-            props.place.map(place => {
-                return(
-                    <div>
-                        <h3>{place.name}</h3>
-                        <img src={place.image} alt="" />
-                    </div>
-                )
-                
-            })
-        }
-        </>
-        
-        
-    )
-};
+        <> 
+        {place.map( (tour) =>(
+      <Tour tour={tour} />))}
+      
+    </>
+   );    
+}
 
 export default Places;
